@@ -1,10 +1,31 @@
-.ct-series-a .ct-line,
-.ct-series-a .ct-point
+.ct-series-a .ct-line
 {
   stroke: blue;
-  #fill: cyan;
+  stroke-width: 3;
+
 }
 
 .ct-series-a .ct-area{
     fill: cyan;
+}
+
+.ct-series-a .ct-point{
+    stroke: blue;
+    stroke-width: 3;
+}
+
+.ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
+  stroke: #59922b;
+}
+
+.ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+  stroke: #f05b4f;
+}
+
+.ct-area.ct-threshold-above {
+  fill: #59922b;
+}
+
+.ct-area.ct-threshold-below {
+  fill: #f05b4f;
 }
