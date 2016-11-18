@@ -11,9 +11,9 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/chartist.css">
 
+    <link rel="stylesheet" href="css/local.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/chartist.js"></script>
 
@@ -25,7 +25,7 @@
 <![endif]-->
 
 
-<div class="ct-chart ct-golden-section" id="chart1"></div>
+<div class="ct-chart ct-golden-section ct-series-a" id="chart1"></div>
 
 <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
@@ -36,10 +36,10 @@
 
     var data = {
         // A labels array that can contain any sort of values
-        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        labels: ['6mth', '','', '3mth','', '', 'now'],
         // Our series array that contains series objects or in this case series data arrays
         series: [
-            [5, 4, NaN, NaN, 4, 1, 0]
+            [100, 50, 0,0, 0, 50, 0]
         ]
     };
 
@@ -47,10 +47,14 @@
     var options = {
 
             showPoint: false,
-            axisX: {
+            low: 0,
+            showArea: true,
+            axisX:{
+                showGrid : false,
 //     showLabel: false
             },
             axisY: {
+                        showGrid : false,
                 //  showLabel:false
             }
         }
